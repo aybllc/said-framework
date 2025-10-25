@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_uforeporting",
+  "version": "CVS: 1.0.0",
+  "license": "Open Source, Paid Support",
+  "assets": [
+    {
+      "name": "com_uforeporting.admin",
+      "type": "style",
+      "uri": "com_uforeporting/admin.css"
+    },
+    {
+      "name": "com_uforeporting.admin",
+      "type": "script",
+      "uri": "com_uforeporting/admin.js",
+      "dependencies": [
+        "jquery"
+      ],
+      "attributes": {
+        "defer": true
+      }
+    },
+    {
+        "name": "com_uforeporting.list",
+        "type": "style",
+        "uri": "com_uforeporting/list.css"
+    }
+  ]
+}

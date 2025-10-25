@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>COM_PEERREVIEW</name>
+    <author>Academic Publishing System</author>
+    <creationDate>2025-01</creationDate>
+    <copyright>(C) 2025 Academic Publishing System</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>admin@example.com</authorEmail>
+    <authorUrl>www.example.com</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_PEERREVIEW_XML_DESCRIPTION</description>
+    
+    <namespace path="src">Joomla\Component\PeerReview</namespace>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    
+    <files folder="site">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>forms</folder>
+    </files>
+    
+    <media destination="com_peerreview" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </media>
+    
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/com_peerreview.ini</language>
+    </languages>
+    
+    <administration>
+        <menu img="class:article">COM_PEERREVIEW</menu>
+        <submenu>
+            <menu link="option=com_peerreview&amp;view=articles" view="articles" img="class:article">COM_PEERREVIEW_ARTICLES</menu>
+            <menu link="option=com_peerreview&amp;view=reviews" view="reviews" img="class:checkin">COM_PEERREVIEW_REVIEWS</menu>
+            <menu link="option=com_peerreview&amp;view=reviewers" view="reviewers" img="class:users">COM_PEERREVIEW_REVIEWERS</menu>
+            <menu link="option=com_peerreview&amp;view=categories" view="categories" img="class:category">COM_PEERREVIEW_CATEGORIES</menu>
+        </submenu>
+        
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/com_peerreview.ini</language>
+            <language tag="en-GB">language/en-GB/com_peerreview.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

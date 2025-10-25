@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" description="COM_UFOREPORTING_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="state"
+               type="status"
+               label="COM_UFOREPORTING_FILTER_STATE"
+               description="COM_UFOREPORTING_FILTER_STATE_DESC"
+               onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        
+
+    </fields>
+
+    <fields name="list">
+
+        <field name="fullordering"
+               type="list"
+               label="COM_UFOREPORTING_LIST_FULL_ORDERING"
+               description="COM_UFOREPORTING_LIST_FULL_ORDERING_DESC"
+               onchange="this.form.submit();"
+               default="a.id DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.id ASC">COM_UFOREPORTING_ID_ASC</option><option value="a.id DESC">COM_UFOREPORTING_ID_DESC</option><option value="a.session_id ASC">COM_UFOREPORTING_SESSION_ID_ASC</option><option value="a.session_id DESC">COM_UFOREPORTING_SESSION_ID_DESC</option><option value="a.occurred_at ASC">COM_UFOREPORTING_OCCURRED_AT_ASC</option><option value="a.occurred_at DESC">COM_UFOREPORTING_OCCURRED_AT_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.obs_mod ASC">COM_UFOREPORTING_OBS_MOD_ASC</option><option value="a.obs_mod DESC">COM_UFOREPORTING_OBS_MOD_DESC</option><option value="a.obs_substrate ASC">COM_UFOREPORTING_OBS_SUBSTRATE_ASC</option><option value="a.obs_substrate DESC">COM_UFOREPORTING_OBS_SUBSTRATE_DESC</option><option value="a.obs_kin ASC">COM_UFOREPORTING_OBS_KIN_ASC</option><option value="a.obs_kin DESC">COM_UFOREPORTING_OBS_KIN_DESC</option><option value="a.obs_sens ASC">COM_UFOREPORTING_OBS_SENS_ASC</option><option value="a.obs_sens DESC">COM_UFOREPORTING_OBS_SENS_DESC</option><option value="a.obs_occ ASC">COM_UFOREPORTING_OBS_OCC_ASC</option><option value="a.obs_occ DESC">COM_UFOREPORTING_OBS_OCC_DESC</option><option value="a.obs_veh ASC">COM_UFOREPORTING_OBS_VEH_ASC</option><option value="a.obs_veh DESC">COM_UFOREPORTING_OBS_VEH_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.obj_mod ASC">COM_UFOREPORTING_OBJ_MOD_ASC</option><option value="a.obj_mod DESC">COM_UFOREPORTING_OBJ_MOD_DESC</option><option value="a.obj_substrate ASC">COM_UFOREPORTING_OBJ_SUBSTRATE_ASC</option><option value="a.obj_substrate DESC">COM_UFOREPORTING_OBJ_SUBSTRATE_DESC</option><option value="a.behavior_code ASC">COM_UFOREPORTING_BEHAVIOR_CODE_ASC</option><option value="a.behavior_code DESC">COM_UFOREPORTING_BEHAVIOR_CODE_DESC</option><option value="a.speed_mod ASC">COM_UFOREPORTING_SPEED_MOD_ASC</option><option value="a.speed_mod DESC">COM_UFOREPORTING_SPEED_MOD_DESC</option><option value="a.shape_code ASC">COM_UFOREPORTING_SHAPE_CODE_ASC</option><option value="a.shape_code DESC">COM_UFOREPORTING_SHAPE_CODE_DESC</option><option value="a.size_mod ASC">COM_UFOREPORTING_SIZE_MOD_ASC</option><option value="a.size_mod DESC">COM_UFOREPORTING_SIZE_MOD_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.confidence ASC">COM_UFOREPORTING_CONFIDENCE_ASC</option><option value="a.confidence DESC">COM_UFOREPORTING_CONFIDENCE_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.longitude ASC">COM_UFOREPORTING_LONGITUDE_ASC</option><option value="a.longitude DESC">COM_UFOREPORTING_LONGITUDE_DESC</option><option value="a.elevation_m ASC">COM_UFOREPORTING_ELEVATION_M_ASC</option><option value="a.elevation_m DESC">COM_UFOREPORTING_ELEVATION_M_DESC</option><option value="a.alt_ft ASC">COM_UFOREPORTING_ALT_FT_ASC</option><option value="a.alt_ft DESC">COM_UFOREPORTING_ALT_FT_DESC</option><option value="a.depth_m ASC">COM_UFOREPORTING_DEPTH_M_ASC</option><option value="a.depth_m DESC">COM_UFOREPORTING_DEPTH_M_DESC</option><option value="a.flight_level ASC">COM_UFOREPORTING_FLIGHT_LEVEL_ASC</option><option value="a.flight_level DESC">COM_UFOREPORTING_FLIGHT_LEVEL_DESC</option><option value="a.velocity_kmh ASC">COM_UFOREPORTING_VELOCITY_KMH_ASC</option><option value="a.velocity_kmh DESC">COM_UFOREPORTING_VELOCITY_KMH_DESC</option><option value="a.accel_g ASC">COM_UFOREPORTING_ACCEL_G_ASC</option><option value="a.accel_g DESC">COM_UFOREPORTING_ACCEL_G_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.pattern_hash ASC">COM_UFOREPORTING_PATTERN_HASH_ASC</option><option value="a.pattern_hash DESC">COM_UFOREPORTING_PATTERN_HASH_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.created_at ASC">COM_UFOREPORTING_CREATED_AT_ASC</option><option value="a.created_at DESC">COM_UFOREPORTING_CREATED_AT_DESC</option><option value="a.updated_at ASC">COM_UFOREPORTING_UPDATED_AT_ASC</option><option value="a.updated_at DESC">COM_UFOREPORTING_UPDATED_AT_DESC</option><option value="a.-- ASC">COM_UFOREPORTING_--_ASC</option><option value="a.-- DESC">COM_UFOREPORTING_--_DESC</option><option value="a.'') ASC">COM_UFOREPORTING__ASC</option><option value="a.'') DESC">COM_UFOREPORTING__DESC</option><option value="a.'') ASC">COM_UFOREPORTING__ASC</option><option value="a.'') DESC">COM_UFOREPORTING__DESC</option><option value="a.'') ASC">COM_UFOREPORTING__ASC</option><option value="a.'') DESC">COM_UFOREPORTING__DESC</option><option value="a.'') ASC">COM_UFOREPORTING__ASC</option><option value="a.'') DESC">COM_UFOREPORTING__DESC</option><option value="a.2}$' ASC">COM_UFOREPORTING_2_ASC</option><option value="a.2}$' DESC">COM_UFOREPORTING_2_DESC</option><option value="a.ordering ASC">COM_UFOREPORTING_ORDERING_ASC</option><option value="a.ordering DESC">COM_UFOREPORTING_ORDERING_DESC</option><option value="a.state ASC">COM_UFOREPORTING_STATE_ASC</option><option value="a.state DESC">COM_UFOREPORTING_STATE_DESC</option><option value="a.created_by ASC">COM_UFOREPORTING_CREATED_BY_ASC</option><option value="a.created_by DESC">COM_UFOREPORTING_CREATED_BY_DESC</option>
+
+        </field>
+
+       <field name="limit"
+               type="limitbox"
+               label="COM_UFOREPORTING_LIST_LIMIT"
+               description="COM_UFOREPORTING_LIST_LIMIT_DESC"
+               class="input-mini"
+               default="25"
+               onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

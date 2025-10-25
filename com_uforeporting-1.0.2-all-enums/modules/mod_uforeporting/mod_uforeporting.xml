@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" method="upgrade" client="site">
+    <name>MOD_UFOREPORTING_NAME</name>
+    <creationDate>2025-08-09</creationDate>
+    <copyright> Claude.ai, Eric D. Martin &amp; Open.Ai</copyright>
+    <license>Open Source, Paid Support</license>
+    <author> Claude.ai, Eric D. Martin &amp; Open.Ai</author>
+    <authorEmail>edm@252edmusmc.xyz</authorEmail>
+    <authorUrl>https://uforeporting.org</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>MOD_UFOREPORTING_DESCRIPTION</description>
+    <namespace path="src">Uforresporting\Module\Uforeporting</namespace>
+    
+    <files>
+        <filename module="mod_uforeporting">mod_uforeporting.php</filename>
+        <filename>index.html</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="mod_uforeporting" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="language">
+        
+			<language tag="en-GB">en-GB/mod_uforeporting.ini</language>
+			<language tag="en-GB">en-GB/mod_uforeporting.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset 
+                name="content_type" 
+                label="MOD_UFOREPORTING_CONTENT_TYPE_TAB_LBL"
+                description="MOD_UFOREPORTING_CONTENT_TYPE_TAB_DESC">
+                <field
+                    name="content_type" type="list"
+                    label="MOD_UFOREPORTING_CONTENT_TYPE_LBL"
+                    description="MOD_UFOREPORTING_CONTENT_TYPE_DESC">
+                    <option value="blank">MOD_UFOREPORTING_CUSTOM_CONTENT</option>
+                    <option value="list">MOD_UFOREPORTING_LIST</option>
+                    <option value="item">MOD_UFOREPORTING_ITEM</option>
+                </field>
+            </fieldset>
+            <fieldset 
+                name="blank_content" 
+                label="MOD_UFOREPORTING_CUSTOM_CONTENT_TAB_LBL"
+                description="MOD_UFOREPORTING_CUSTOM_CONTENT_TAB_DESC">
+                <field 
+                    name="html_content" type="editor" filter="safehtml"
+                    label="MOD_UFOREPORTING_HTML_LBL"
+                    description="MOD_UFOREPORTING_HTML_DESC" />
+            </fieldset>
+            <fieldset 
+                name="list_content" 
+                label="MOD_UFOREPORTING_LIST_CONTENT_TAB_LBL"
+                description="MOD_UFOREPORTING_LIST_CONTENT_TAB_DESC">
+                <field
+                    name="table" type="list"
+                    label="MOD_UFOREPORTING_TABLE_LBL"
+                    description="MOD_UFOREPORTING_TABLE_DESC">
+                    
+	<option value="#__ommp_domains">#__ommp_domains</option>
+	<option value="#__ommp_behaviors">#__ommp_behaviors</option>
+	<option value="#__ommp_environment">#__ommp_environment</option>
+	<option value="#__ommp_observer_kinematics">#__ommp_observer_kinematics</option>
+	<option value="#__ommp_observer_vehicle">#__ommp_observer_vehicle</option>
+	<option value="#__ommp_invalid_pairs">#__ommp_invalid_pairs</option>
+	<option value="#__ommp_sightings">#__ommp_sightings</option>
+	<option value="#__ommp_media">#__ommp_media</option>
+	<option value="#__ommp_witnesses">#__ommp_witnesses</option>
+                </field>
+                <field 
+                    name="field" type="groupedlist" default=""
+                    label="MOD_UFOREPORTING_FIELD_LBL"
+                    description="MOD_UFOREPORTING_FIELD_DESC">
+                    
+	<group label="#__ommp_domains">
+		<option value="#__ommp_domains:code">code</option>
+		<option value="#__ommp_domains:name">name</option>
+		<option value="#__ommp_domains:description">description</option>
+		<option value="#__ommp_domains:minus_range">minus_range</option>
+		<option value="#__ommp_domains:equal_range">equal_range</option>
+		<option value="#__ommp_domains:plus_range">plus_range</option>
+		<option value="#__ommp_domains:id">id</option>
+		<option value="#__ommp_domains:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_behaviors">
+		<option value="#__ommp_behaviors:behavior_code">behavior_code</option>
+		<option value="#__ommp_behaviors:behavior_name">behavior_name</option>
+		<option value="#__ommp_behaviors:behavior_description">behavior_description</option>
+		<option value="#__ommp_behaviors:id">id</option>
+		<option value="#__ommp_behaviors:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_environment">
+		<option value="#__ommp_environment:env_code">env_code</option>
+		<option value="#__ommp_environment:env_name">env_name</option>
+		<option value="#__ommp_environment:env_description">env_description</option>
+		<option value="#__ommp_environment:id">id</option>
+		<option value="#__ommp_environment:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_observer_kinematics">
+		<option value="#__ommp_observer_kinematics:code">code</option>
+		<option value="#__ommp_observer_kinematics:name">name</option>
+		<option value="#__ommp_observer_kinematics:definition">definition</option>
+		<option value="#__ommp_observer_kinematics:id">id</option>
+		<option value="#__ommp_observer_kinematics:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_observer_vehicle">
+		<option value="#__ommp_observer_vehicle:code">code</option>
+		<option value="#__ommp_observer_vehicle:name">name</option>
+		<option value="#__ommp_observer_vehicle:definition">definition</option>
+		<option value="#__ommp_observer_vehicle:id">id</option>
+		<option value="#__ommp_observer_vehicle:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_invalid_pairs">
+		<option value="#__ommp_invalid_pairs:observer_domain">observer_domain</option>
+		<option value="#__ommp_invalid_pairs:object_domain">object_domain</option>
+		<option value="#__ommp_invalid_pairs:reason">reason</option>
+		<option value="#__ommp_invalid_pairs:id">id</option>
+		<option value="#__ommp_invalid_pairs:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_sightings">
+		<option value="#__ommp_sightings:id">id</option>
+		<option value="#__ommp_sightings:session_id">session_id</option>
+		<option value="#__ommp_sightings:occurred_at">occurred_at</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:obs_mod">obs_mod</option>
+		<option value="#__ommp_sightings:obs_substrate">obs_substrate</option>
+		<option value="#__ommp_sightings:obs_kin">obs_kin</option>
+		<option value="#__ommp_sightings:obs_sens">obs_sens</option>
+		<option value="#__ommp_sightings:obs_occ">obs_occ</option>
+		<option value="#__ommp_sightings:obs_veh">obs_veh</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:obj_mod">obj_mod</option>
+		<option value="#__ommp_sightings:obj_substrate">obj_substrate</option>
+		<option value="#__ommp_sightings:behavior_code">behavior_code</option>
+		<option value="#__ommp_sightings:speed_mod">speed_mod</option>
+		<option value="#__ommp_sightings:shape_code">shape_code</option>
+		<option value="#__ommp_sightings:size_mod">size_mod</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:confidence">confidence</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:longitude">longitude</option>
+		<option value="#__ommp_sightings:elevation_m">elevation_m</option>
+		<option value="#__ommp_sightings:alt_ft">alt_ft</option>
+		<option value="#__ommp_sightings:depth_m">depth_m</option>
+		<option value="#__ommp_sightings:flight_level">flight_level</option>
+		<option value="#__ommp_sightings:velocity_kmh">velocity_kmh</option>
+		<option value="#__ommp_sightings:accel_g">accel_g</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:pattern_hash">pattern_hash</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:created_at">created_at</option>
+		<option value="#__ommp_sightings:updated_at">updated_at</option>
+		<option value="#__ommp_sightings:--">--</option>
+		<option value="#__ommp_sightings:'')">'')</option>
+		<option value="#__ommp_sightings:'')">'')</option>
+		<option value="#__ommp_sightings:'')">'')</option>
+		<option value="#__ommp_sightings:'')">'')</option>
+		<option value="#__ommp_sightings:2}$'">2}$'</option>
+		<option value="#__ommp_sightings:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_media">
+		<option value="#__ommp_media:id">id</option>
+		<option value="#__ommp_media:sighting_id">sighting_id</option>
+		<option value="#__ommp_media:kind">kind</option>
+		<option value="#__ommp_media:uri">uri</option>
+		<option value="#__ommp_media:mime">mime</option>
+		<option value="#__ommp_media:captured_at">captured_at</option>
+		<option value="#__ommp_media:meta">meta</option>
+		<option value="#__ommp_media:created_at">created_at</option>
+		<option value="#__ommp_media:created_by">created_by</option>
+	</group>
+	<group label="#__ommp_witnesses">
+		<option value="#__ommp_witnesses:id">id</option>
+		<option value="#__ommp_witnesses:sighting_id">sighting_id</option>
+		<option value="#__ommp_witnesses:label">label</option>
+		<option value="#__ommp_witnesses:notes">notes</option>
+		<option value="#__ommp_witnesses:created_at">created_at</option>
+		<option value="#__ommp_witnesses:created_by">created_by</option>
+	</group>
+                </field>
+                <field 
+                    name="offset" type="text" default="0" filter="uint" class="input-small"
+                    label="MOD_UFOREPORTING_OFFSET_LBL"
+                    description="MOD_UFOREPORTING_OFFSET_DESC" />
+                <field 
+                    name="limit" type="text" default="10" filter="uint" class="input-small"
+                    label="MOD_UFOREPORTING_LIMIT_LBL"
+                    description="MOD_UFOREPORTING_LIMIT_DESC" />
+            </fieldset>
+            <fieldset 
+                name="item_content" 
+                label="MOD_UFOREPORTING_ITEM_CONTENT_TAB"
+                description="MOD_UFOREPORTING_ITEM_CONTENT_TAB_DESC">
+                <field
+                    name="item_table" type="list"
+                    label="MOD_UFOREPORTING_TABLE_LBL"
+                    description="MOD_UFOREPORTING_TABLE_DESC">
+                    
+	<option value="#__ommp_domains">#__ommp_domains</option>
+	<option value="#__ommp_behaviors">#__ommp_behaviors</option>
+	<option value="#__ommp_environment">#__ommp_environment</option>
+	<option value="#__ommp_observer_kinematics">#__ommp_observer_kinematics</option>
+	<option value="#__ommp_observer_vehicle">#__ommp_observer_vehicle</option>
+	<option value="#__ommp_invalid_pairs">#__ommp_invalid_pairs</option>
+	<option value="#__ommp_sightings">#__ommp_sightings</option>
+	<option value="#__ommp_media">#__ommp_media</option>
+	<option value="#__ommp_witnesses">#__ommp_witnesses</option>
+                </field>
+                <field 
+                    name="item_id" type="text" filter="uint" class="input-small"
+                    label="MOD_UFOREPORTING_ITEM_ID_LBL"
+                    description="MOD_UFOREPORTING_ITEM_ID_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="com_uforeporting">https://www.component-creator.com/index.php?task=builder.preupdatecheckhook&amp;option=com_combuilder&amp;component=NzY3ODctMjE1OTA0</server>
+    </updateservers>
+</extension>

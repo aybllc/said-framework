@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_uforeporting</name>
+    <creationDate>2025-08-09</creationDate>
+    <copyright> Claude.ai, Eric D. Martin &amp; Open.Ai</copyright>
+    <license>Open Source, Paid Support</license>
+    <author> Claude.ai, Eric D. Martin &amp; Open.Ai</author>
+    <authorEmail>edm@252edmusmc.xyz</authorEmail>
+    <authorUrl>https://uforeporting.org</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description></description>
+    <namespace path="src">Uforresporting\Component\Uforeporting</namespace>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <schemas>
+            <schemapath type="mysql">sql/updates</schemapath>
+        </schemas>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <api>
+		<files folder="webservices">
+			<folder>src</folder>
+		</files>
+	</api>
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>forms</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="com_uforeporting" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/com_uforeporting.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_UFOREPORTING</menu>
+        <submenu>
+            
+			<menu link="option=com_uforeporting&amp;view=domains" view="domains" alt="Uforeporting/Domains">COM_UFOREPORTING_TITLE_DOMAINS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=behaviors" view="behaviors" alt="Uforeporting/Behaviors">COM_UFOREPORTING_TITLE_BEHAVIORS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=environments" view="environments" alt="Uforeporting/Environments">COM_UFOREPORTING_TITLE_ENVIRONMENTS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=kinematics" view="kinematics" alt="Uforeporting/Kinematics">COM_UFOREPORTING_TITLE_KINEMATICS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=vehicles" view="vehicles" alt="Uforeporting/Vehicles">COM_UFOREPORTING_TITLE_VEHICLES</menu>
+
+			<menu link="option=com_uforeporting&amp;view=pairs" view="pairs" alt="Uforeporting/Pairs">COM_UFOREPORTING_TITLE_PAIRS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=sightings" view="sightings" alt="Uforeporting/Sightings">COM_UFOREPORTING_TITLE_SIGHTINGS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=medias" view="medias" alt="Uforeporting/Medias">COM_UFOREPORTING_TITLE_MEDIAS</menu>
+
+			<menu link="option=com_uforeporting&amp;view=witnesses" view="witnesses" alt="Uforeporting/Witnesses">COM_UFOREPORTING_TITLE_WITNESSES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>services</folder>
+            <folder>presets</folder>
+            <folder>sql</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/com_uforeporting.ini</language>
+			<language tag="en-GB">en-GB/com_uforeporting.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+		<plugin group="finder" plugin="uforeportingdomains"/>
+		<plugin group="privacy" plugin="uforeportingdomains"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="privacy" plugin="uforeportingbehaviors"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="privacy" plugin="uforeportingenvironments"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="privacy" plugin="uforeportingkinematics"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="privacy" plugin="uforeportingvehicles"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="privacy" plugin="uforeportingpairs"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="finder" plugin="uforeportingsightings"/>
+		<plugin group="privacy" plugin="uforeportingsightings"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="finder" plugin="uforeportingmedias"/>
+		<plugin group="privacy" plugin="uforeportingmedias"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+		<plugin group="finder" plugin="uforeportingwitnesses"/>
+		<plugin group="privacy" plugin="uforeportingwitnesses"/>
+		<plugin group="webservices" plugin="uforeporting"/>
+    </plugins>
+    <modules>
+		<module module="mod_uforeporting" />
+	</modules>
+
+    <updateservers>
+        <server type="extension" priority="1" name="com_uforeporting">https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&amp;option=com_combuilder&amp;component=NzY3ODctMjE1OTA0</server>
+    </updateservers>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
