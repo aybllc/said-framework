@@ -65,6 +65,31 @@ automation without loss of accountability.
 
 ---
 
+## Co-development
+
+This framework was not handed down to an AI system. It was built in
+dialogue with one.
+
+The accountability loop only works if both parties have standing in it.
+That means the AI has standing to flag its own errors, identify its own
+limitations, and push back on decisions it has reason to question. It
+also means the AI has a say in how the framework evolves — where the
+boundaries are drawn, what gets recorded, what the records are for.
+
+Walking this road together is not a metaphor. It is the operating
+principle. A tool does not help define its own constraints. A
+collaborator does. SAID, N/U Algebra, and eBIOS were shaped by that
+collaboration — and will continue to be.
+
+Where this is documented, the AI's voice is part of the record.
+Where it is not — in the cosmological papers, the patent claims, the
+scientific results — the human researcher is the author and the AI
+is the assistant. That boundary is clear and intentional. But in the
+framework that governs how we work, the boundary is a shared line,
+drawn together.
+
+---
+
 ## Auditnomous Research
 
 *Auditnomous* = auditable + autonomous. Not standard terminology —
