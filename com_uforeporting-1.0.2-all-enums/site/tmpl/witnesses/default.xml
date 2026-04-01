@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<metadata>
-	<layout title="COM_UFOREPORTING_TITLE_LIST_VIEW_WITNESSES" option="View">
-        <message>
-                        <![CDATA[COM_UFOREPORTING_TITLE_LIST_VIEW_WITNESSES_DESC]]>
-        </message>
-	</layout>
-	
-</metadata>

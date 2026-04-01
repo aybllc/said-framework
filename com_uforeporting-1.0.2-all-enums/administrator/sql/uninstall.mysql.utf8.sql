@@ -1,9 +1,0 @@
-DROP TABLE IF EXISTS `#__ommp_domains`;
-DROP TABLE IF EXISTS `#__ommp_behaviors`;
-DROP TABLE IF EXISTS `#__ommp_environment`;
-DROP TABLE IF EXISTS `#__ommp_observer_kinematics`;
-DROP TABLE IF EXISTS `#__ommp_observer_vehicle`;
-DROP TABLE IF EXISTS `#__ommp_invalid_pairs`;
-DROP TABLE IF EXISTS `#__ommp_sightings`;
-DROP TABLE IF EXISTS `#__ommp_media`;
-DROP TABLE IF EXISTS `#__ommp_witnesses`;
