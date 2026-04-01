@@ -16,37 +16,64 @@ produced.
 Three systems work together to make that traceability complete:
 
 **N/U Algebra** (Zenodo: 10.5281/zenodo.17172694) — the mathematical
-layer. Every uncertainty in this research is propagated analytically,
-not approximated by Monte Carlo. Nominal and uncertainty travel together
-as an ordered pair (n, u) through every calculation, at machine
-precision. The audit trail is not just "what number" but "how certain,
-and why."
+layer. Every uncertainty is propagated analytically, not approximated.
+Nominal and uncertainty travel together as an ordered pair (n, u)
+through every calculation at machine precision. The audit trail is not
+just "what number" but "how certain, and why."
 
-**eBIOS** (Zenodo: 10.5281/zenodo.17400232) — the epistemic layer.
-eBIOS is the cryptographic, immutable root that ensures AI systems
-operating in this research cannot misrepresent their epistemic state.
-It formalises the principle of bounded auditonomy: the freedom to
-reason and assist, within an envelope of honest accountability. An
-AI operating under eBIOS cannot exceed its truth envelope. Honesty
-is a law of motion, not a license term.
+**eBIOS** (Zenodo: 10.5281/zenodo.17400232) — the epistemic root.
+eBIOS defines the bounded operating envelope for any AI system
+contributing to this research: what it can claim, how it must behave,
+and what it cannot exceed. An AI under eBIOS cannot misrepresent its
+epistemic state. Honesty is a law of motion, not a license term.
 
 **SAID** — the provenance layer. Session logs, timestamps, decisions,
 and Zenodo DOIs that pre-date any claim they support.
 
 ---
 
+## De-automating automation
+
+The purpose of this stack is not to remove the human from the loop.
+It is the opposite: to keep the human *in* the loop by making every
+AI contribution visible, bounded, and challengeable.
+
+Without explicit records, automation compounds errors silently. You
+end up chasing mistakes instead of catching them. SAID + N/U Algebra
++ eBIOS changes that. Errors become first-class citizens: identified,
+recorded, and listed alongside the researcher's own called-out items.
+They are not hidden. They are part of the record.
+
+This gives both the researcher and the AI system genuine means of
+pushback. Either party can flag a discrepancy, update the record,
+or challenge a result — with full CRUD accountability on both sides.
+The AI does not lose the ability to reason and contribute. The
+researcher does not lose the ability to override and correct. What
+neither party loses is the audit trail.
+
+**eBIOS and SAID work together as two sides of the same accountability
+loop:**
+
+- eBIOS governs *how* the AI operates — the epistemic constraints that
+  bound what it can claim before it acts.
+- SAID records *what* actually happened — the provenance that shows
+  what was claimed, what was accepted, and what was changed.
+
+eBIOS is the constraint before the output. SAID is the record after.
+Together they close the loop: cooperation without blind trust,
+automation without loss of accountability.
+
+---
+
 ## Auditnomous Research
 
-The term is intentional. *Auditnomous* = auditable + autonomous. Not
-standard terminology yet — but a more precise word for what this
-research program produces: work that is independently verifiable at
-every layer by design, not as an afterthought.
+*Auditnomous* = auditable + autonomous. Not standard terminology —
+but a more precise word for what this research program produces: work
+that is independently verifiable at every layer by design, not as an
+afterthought.
 
-SAID, N/U Algebra, and eBIOS together make a research record
-auditnomous: the provenance is logged, the uncertainty is exact, and
-the epistemic state of every contributing system — human or AI — is
-on record. An auditnomous result does not require trust. It provides
-the means to verify.
+A result is auditnomous when it does not require trust to be accepted.
+It provides the means to verify instead.
 
 ---
 
@@ -59,8 +86,10 @@ the means to verify.
 - **Decisions** — what the researcher chose to do and why
 - **AI interactions** — prompt, output, and researcher decision on
   record for every session
-- **Timestamps** — Zenodo DOIs pre-date any claims they are
-  associated with
+- **Errors and corrections** — flagged, recorded, and listed; not
+  chased after the fact
+- **Timestamps** — Zenodo DOIs pre-date any claims they are associated
+  with
 
 An independent researcher without institutional infrastructure uses
 SAID the way a lab maintains a research log: so the work can be
@@ -96,4 +125,5 @@ checked, challenged, and built on by anyone who needs to.
 **eBIOS** — Zenodo: 10.5281/zenodo.17400232
 **SAID Framework** — Zenodo: 10.5281/zenodo.19230718
 
-*The research is traceable. The uncertainty is exact. The reasoning is auditable. That is the point.*
+*The research is traceable. The uncertainty is exact. The reasoning
+is auditable. Errors are on record, not in hiding. That is the point.*
