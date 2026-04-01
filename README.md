@@ -7,64 +7,57 @@ Eric D. Martin | ORCID: 0009-0006-5944-1742 | Zenodo: 10.5281/zenodo.19230718
 
 ## What it is
 
-SAID is an audit log for AI-assisted research. Think of it the way a lab
-notebook works: the notebook does not run the experiment — it records what
-happened, who decided what, and what tools were used. The researcher is still
-the scientist. SAID makes the same principle apply when the tool is an AI.
+SAID is a traceability system for this research program. Every claim,
+result, and decision in this body of work has a documented origin:
+which dataset, which script, which session, which date. SAID is the
+thread that connects a published number back to the moment it was
+produced.
 
-Every session in which Claude (or any AI) contributed to this research has a
-session ID, a timestamp, and a record of what was asked and what was returned.
-The scientific conclusions are the researcher's. The session logs are the
-evidence trail.
+AI disclosure is one component of that traceability — not the whole
+purpose. The whole purpose is to make the research auditable end to end.
 
 ---
 
-## When it is used
+## What it traces
 
-SAID is active throughout this research program — code analysis, manuscript
-drafting, literature cross-referencing, data interpretation. It is used
-because the researcher is independent, without institutional infrastructure,
-and AI serves the role a research assistant would in a conventional lab
-setting. The difference is that this assistant's contributions are logged and
-auditable in a way that a human assistant's often are not.
+- **Provenance** — where each result came from, down to the script and
+  the input data
+- **Decisions** — what the researcher chose to do and why, at each step
+- **AI interactions** — what was asked of an AI tool, what it returned,
+  and what the researcher accepted, rejected, or modified
+- **Timestamps** — Zenodo DOIs pre-date any claims associated with them;
+  the record exists before the assertion does
+
+An independent researcher without institutional infrastructure uses SAID
+the way a lab maintains a research log: so the work can be checked,
+challenged, and built on by anyone who needs to.
 
 ---
 
 ## How to audit this work
 
-1. Every paper and preprint in this program carries session IDs or Zenodo
-   DOIs that link back to SAID records.
-2. Session IDs identify the specific AI interaction. The record contains the
-   prompt, the output, and the researcher's decision about what to use.
-3. All code is open source and independently reproducible. Running the
-   scripts produces the same numbers with or without the session logs.
-4. The math does not depend on the AI. The AI helped write it down.
-
-If you are a reviewer or auditor: the session logs exist. The code runs. The
-Zenodo timestamps predate any claims they are associated with.
+1. Every paper carries a Zenodo DOI. The DOI timestamp predates
+   submission.
+2. All code is open source and independently reproducible — running the
+   scripts produces the same numbers.
+3. Session IDs in SAID records identify specific AI interactions. The
+   prompt, the output, and the researcher's decision about what to use
+   are all on record.
+4. The math does not depend on the AI. The research can be verified
+   without the session logs. The session logs exist so nothing has to
+   be taken on trust.
 
 ---
 
 ## Where it is headed
 
-Right now, AI is a documented tool. The standards catching up to this reality
-include IEEE P7001 (Transparency in Autonomous Systems) and ISO/IEC 42001
-(AI Management Systems). SAID is designed to be compliant with both as they
-mature.
+As AI becomes a genuine collaborator rather than just a tool, the
+question of what a human researcher decided vs. what an AI produced
+becomes harder to answer without documentation. SAID was built to be
+valid at both ends of that spectrum — tool today, autonomous collaborator
+tomorrow.
 
-What changes over time is not the principle but the complexity. As AI systems
-become genuinely cooperative rather than merely responsive, the audit trail
-becomes more important, not less. SAID was built to be valid at both ends of
-that spectrum — tool today, collaborator tomorrow — without requiring the
-framework to be rebuilt when the boundary shifts.
-
-The honest name for where this is going is autonomous intelligence auditing:
-not just logging what the AI did, but maintaining a verifiable record of
-the human-AI reasoning chain as that chain becomes harder to separate.
-
----
-
-## Standards alignment
+Relevant standards this framework is designed to align with:
 
 | Standard | Relevance |
 |----------|-----------|
@@ -74,6 +67,4 @@ the human-AI reasoning chain as that chain becomes harder to separate.
 
 ---
 
-*An independent researcher without institutional affiliation relies on SAID
-the same way any researcher relies on documented methodology: to show their
-work. The system exists so the work can be checked.*
+*The research is traceable. That is the point.*
