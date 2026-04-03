@@ -1,0 +1,30 @@
+[
+  {
+    "pattern": "\\.(py|md|txt|tex|yaml|yml|toml|cfg|ini)$",
+    "level": "public"
+  },
+  {
+    "pattern": "\\.(json)$",
+    "level": "public"
+  },
+  {
+    "pattern": "(^|/)notebooks?(/|$)",
+    "level": "restricted"
+  },
+  {
+    "pattern": "(^|/)models?(/|$)",
+    "level": "restricted"
+  },
+  {
+    "pattern": "\\.(fits|fit|hdf5?|parquet|npz|npy|gz|bz2|xz)$",
+    "level": "private"
+  },
+  {
+    "pattern": "(^|/)raw(_|\\-)?data(/|$)",
+    "level": "private"
+  },
+  {
+    "pattern": "(^|/)secrets?(/|$)",
+    "level": "private"
+  }
+]
