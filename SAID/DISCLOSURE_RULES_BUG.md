@@ -43,6 +43,14 @@ notebooks/analysis.ipynb  → Rule 3 fires (notebooks/ = restricted) ← correct
 4. **Most-specific-wins** — refactor the engine to prefer longer/more-specific
    patterns over shorter ones.
 
+## Resolution
+
+**Fixed** — directory rules moved above extension rules. First-match-wins now means
+`notebooks/`, `models/`, `secrets/`, `raw_data/` all fire before any extension rule.
+Also added `ipynb` explicitly to the json rule as a belt-and-suspenders measure.
+
+**Status: CLOSED**
+
 ## Origin
 
 Recovered from `backups/claude/fixes/DISCLOSURE_RULES.json` (ChatGPT artifact,

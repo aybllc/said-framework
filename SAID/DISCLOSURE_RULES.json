@@ -1,11 +1,12 @@
 [
   {
-    "pattern": "\\.(py|md|txt|tex|yaml|yml|toml|cfg|ini)$",
-    "level": "public"
+    "_comment": "Directory rules first — first-match-wins, so these override extension rules below",
+    "pattern": "(^|/)secrets?(/|$)",
+    "level": "private"
   },
   {
-    "pattern": "\\.(json)$",
-    "level": "public"
+    "pattern": "(^|/)raw(_|\\-)?data(/|$)",
+    "level": "private"
   },
   {
     "pattern": "(^|/)notebooks?(/|$)",
@@ -16,15 +17,16 @@
     "level": "restricted"
   },
   {
+    "_comment": "Extension rules after directory rules",
     "pattern": "\\.(fits|fit|hdf5?|parquet|npz|npy|gz|bz2|xz)$",
     "level": "private"
   },
   {
-    "pattern": "(^|/)raw(_|\\-)?data(/|$)",
-    "level": "private"
+    "pattern": "\\.(py|md|txt|tex|yaml|yml|toml|cfg|ini)$",
+    "level": "public"
   },
   {
-    "pattern": "(^|/)secrets?(/|$)",
-    "level": "private"
+    "pattern": "\\.(json|ipynb)$",
+    "level": "public"
   }
 ]
